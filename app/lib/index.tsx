@@ -6,6 +6,7 @@ import styles from "./index.module.css";
 
 const ExampleTinyFrontend: React.FC<ExampleTinyFrontendProps> = ({
   name,
+  description,
   onCounterChange,
 }) => {
   const [value, setValue] = useState(0);
@@ -14,7 +15,9 @@ const ExampleTinyFrontend: React.FC<ExampleTinyFrontendProps> = ({
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>Hello {name}! 🎉</h1>
+      <h1 className={styles.title}>
+        Hello {name}! 🎉 {description}
+      </h1>
 
       <div className={styles.descriptionContainer}>
         <p>
